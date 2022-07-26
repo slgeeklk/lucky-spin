@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Fiest</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+</head>
+<body>
+
+<header class="topbar">
+    <div class="logo">
+      <a href="#" class="mylogo"><img src="images/logo.png" alt="logo" id="head-img"></a>
+    </div>
+    <nav class="navigation">
+      <ul>
+        <h1 id="result-head">| Click The Play button to Start</h1>
+      </ul>
+    </nav>
+    <nav class="user">
+      <ul>
+        <!-- <i id="open" class="bi bi-box-arrow-in-right"></i> -->
+        <i onclick=refresh() class="bi bi-arrow-clockwise"></i>
+      </ul>
+    </nav>
+  </header>
+
+
+
+    <div id="chances">Spins Left : 1</div>
+    <div id="main-cont">
+        <img src="images/spin-wheel.png" alt="spin-wheel" id="spin-wheel">
+        <img src="images/arrow.png" alt="" id="arrow-img">
+        <img src="images/play.png" alt="" id="play-img" onclick=spin()>
+    </div>
+
+<!--MODAL-->
+<div class="modal-container" id="modal-container">
+    <div class="modal" id="modal_container">
+        <h1>Please Login In</h1><br>
+        <label for="">Mobile Number</label><br>
+        <input id="numberInp" type="text" placeholder="07XXXXXXXX"><br><br>
+        <hr>
+        <h3>Filled by staff</h3>
+        <div class="numSP">
+        <label for="">No. of Spins</label><br>
+        <input id="numSpins" type="number" value="1">  
+        </div>
+        <div class="passClz">
+        <label for="">Password</label><br>
+        <input id="pass" value="12345678" type="password">
+        </div>
+        
+        <button id="submit" onclick=modalEnter()>Enter</button>
+    </div>
+</div>
+
+<!--Won MODAL-->
+<div class="modal-container1" id="modal-container1">
+    <div class="modal1" id="modal_container1">
+        <i id="modal-icon" class="bi bi-check-circle-fill"></i>
+        <h1 id="modalWonText"></h1><br>
+        <hr>
+        <h2 id="modalWonDescription"></h2><br>
+       <i id="modalClose" onclick=modalClose() class="bi bi-arrow-right-circle-fill"></i>
+    </div>
+</div>
+
+
+
+    <footer>
+        Made with ❤️ by <a href="https://www.slgeek.lk">SL Geek</a>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
